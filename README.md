@@ -19,7 +19,7 @@ Open another terminal node to run the json-server local api to populate the ques
 ### `npm run server`
 
 It will run a mock api server script in a separate browser window.\
-Open a new browser window in [http://localhost:8000/questions](http://localhost:8000/questions) to view the questions.json database.
+Open a new browser window in [http://localhost:8000/](http://localhost:8000/)[database-name] to view the db.json database.
 
 Credit to typicode for json-server a full fake REST API in github:
 
