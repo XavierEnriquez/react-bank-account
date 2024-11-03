@@ -1,9 +1,25 @@
+:root {
+  --color-darkest: #2d3134;
+  --color-dark: #495057;
+  --color-medium: #ced4da;
+  --color-light: #f1f3f5;
+
+  --color-theme: #1098ad;
+  --color-accent: #ffa94d;
+}
+
 .App {
-  text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* text-align: center; */
+  color: white;
 }
 
 .App-logo {
-  height: 9vmin;
+  height: 3.5rem;
   pointer-events: none;
 }
 
@@ -13,20 +29,6 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 3vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -34,4 +36,107 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.App-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.App main {
+  display: flex;
+  flex-direction: column;
+}
+
+.panels-wrapper {
+  display: flex;
+  gap: 1rem;
+}
+
+.menu-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.menu-btn {
+  width: 100%;
+  display: block;
+  font-family: inherit;
+  color: var(--color-light);
+  font-size: 1rem;
+  text-align: left;
+  border: 2px solid var(--color-dark);
+  background-color: var(--color-dark);
+  padding: 0.65rem 1.125rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.menu-btn:not([disabled]):hover {
+  background-color: var(--color-darkest);
+  border: 2px solid var(--color-darkest);
+}
+
+.data-panel {
+  background-color: var(--color-darkest);
+  min-width: 18rem;
+  padding: 0rem 2rem;
+}
+
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+  gap: 1.6rem;
+  color: var(--color-medium);
+  font-size: 1.4rem;
+}
+
+/* CREDIT: https://dev.to/afif/i-made-100-css-loaders-for-your-next-project-4eje */
+.loader {
+  width: 50px;
+  height: 24px;
+  background: radial-gradient(circle closest-side, currentColor 90%, #0000) 0%
+      50%,
+    radial-gradient(circle closest-side, currentColor 90%, #0000) 50% 50%,
+    radial-gradient(circle closest-side, currentColor 90%, #0000) 100% 50%;
+  background-size: calc(100% / 3) 12px;
+  background-repeat: no-repeat;
+  animation: loader 1s infinite linear;
+}
+
+@keyframes loader {
+  20% {
+    background-position: 0% 0%, 50% 50%, 100% 50%;
+  }
+  40% {
+    background-position: 0% 100%, 50% 0%, 100% 50%;
+  }
+  60% {
+    background-position: 0% 50%, 50% 100%, 100% 0%;
+  }
+  80% {
+    background-position: 0% 50%, 50% 50%, 100% 100%;
+  }
+}
+
+.error {
+  width: 100%;
+  text-align: center;
+  font-size: 1.25rem;
+  margin-top: 25%;
 }

@@ -1,13 +1,112 @@
 {
-  "posts": [
-    { "id": "1", "title": "a title", "views": 100 },
-    { "id": "2", "title": "another title", "views": 200 }
+  "users": [
+    {
+      "id": "1",
+      "accounts": ["123"]
+    }
   ],
-  "comments": [
-    { "id": "1", "text": "a comment about post 1", "postId": "1" },
-    { "id": "2", "text": "another comment about post 1", "postId": "1" }
+  "userProfile": {
+    "id": "1",
+    "type": "customer",
+    "name": "Xav",
+    "surname": "Enr"
+  },
+  "accounts": [
+    {
+      "accId": "123",
+      "userId": "1",
+      "status": "active",
+      "openDate": "11/01/2024",
+      "closeDate": "",
+      "balance": 98000,
+      "deposit": ["d1", "d2", "d3"],
+      "withdraws": ["w1", "w2"],
+      "transfers": [],
+      "loans": ["ln1-123"]
+    }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "deposits": [
+    {
+      "depId": "d1",
+      "accId": "123",
+      "date": "11/02/2024",
+      "amount": 30000,
+      "type": "cash"
+    },
+    {
+      "depId": "d2",
+      "accId": "123",
+      "date": "11/02/2024",
+      "amount": 30000,
+      "type": "online"
+    },
+    {
+      "depId": "d3",
+      "accId": "123",
+      "date": "11/02/2024",
+      "amount": 40000,
+      "type": "online"
+    }
+  ],
+  "withdraws": [
+    {
+      "witId": "w1",
+      "accId": "123",
+      "date": "11/01/2024",
+      "amount": 1000,
+      "type": "cash"
+    },
+    {
+      "witId": "w2",
+      "accId": "123",
+      "date": "11/02/2024",
+      "amount": 1000,
+      "type": "cash"
+    }
+  ],
+  "loans": [
+    {
+      "loanId": "ln1-123",
+      "accountId": "123",
+      "date": "11/02/2024",
+      "status": "current",
+      "amount": 1000,
+      "payments": ["p1"],
+      "balance": 900,
+      "term": 60,
+      "payOffDate": ""
+    }
+  ],
+  "payments": [
+    {
+      "payId": "p1",
+      "loanId": "1-123",
+      "date": "11/02/2024",
+      "amount": 100,
+      "type": "online"
+    }
+  ],
+
+  "contactNotes": [
+    {
+      "conId": "1",
+      "accId": "123",
+      "date": "11/02/2024",
+      "text": "a comment about post 1"
+    },
+    {
+      "conId": "2",
+      "accId": "123",
+      "date": "11/01/2024",
+      "text": "a comment about post 2"
+    }
+  ],
+  "transactionType": [
+    "cash",
+    "check",
+    "transfer",
+    "online",
+    "atm",
+    "cashier-check"
+  ]
 }
