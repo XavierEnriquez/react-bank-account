@@ -4,7 +4,7 @@ function Header() {
   return (
     <header className="App-header">
       <img src={logo} className="App-logo" alt="logo" />
-      <h1>React Bank</h1>
+      <h1>Xavier React Bank</h1>
     </header>
   );
 }

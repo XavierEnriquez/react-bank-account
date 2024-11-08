@@ -1,30 +1,27 @@
 import MenuButton from "./MenuButton";
 
-function MenuPanel() {
+function MenuPanel({ dispatch, isActive }) {
   return (
     <div className="menu-panel">
-      <MenuButton onClick={() => {}} disabled={false}>
-        {"Dashboard"}
-      </MenuButton>
-      <MenuButton onClick={() => {}} disabled={false}>
-        {"Deposit"}
-      </MenuButton>
-      <MenuButton onClick={() => {}} disabled={false}>
-        {"Withdraw"}
-      </MenuButton>
-      <MenuButton onClick={() => {}} disabled={false}>
-        {"Transfer"}
-      </MenuButton>
-      <MenuButton onClick={() => {}} disabled={false}>
-        {"Loans"}
-      </MenuButton>
-      <MenuButton onClick={() => {}} disabled={false}>
-        {"Payments"}
-      </MenuButton>
-      <MenuButton onClick={() => {}} disabled={false}>
+      <MenuButton dispatch={dispatch} isActive={!isActive}>
         {"Open Account"}
       </MenuButton>
-      <MenuButton onClick={() => {}} disabled={false}>
+      {/* <MenuButton dispatch={dispatch} isActive={isActive}>
+        {"Dashboard"}
+      </MenuButton> */}
+      <MenuButton dispatch={dispatch} isActive={isActive}>
+        {"Deposits"}
+      </MenuButton>
+      <MenuButton dispatch={dispatch} isActive={isActive}>
+        {"Withdrawals"}
+      </MenuButton>
+      <MenuButton dispatch={dispatch} isActive={isActive}>
+        {"Loans"}
+      </MenuButton>
+      <MenuButton dispatch={dispatch} isActive={isActive}>
+        {"Payments"}
+      </MenuButton>
+      <MenuButton dispatch={dispatch} isActive={isActive}>
         {"Close Account"}
       </MenuButton>
     </div>

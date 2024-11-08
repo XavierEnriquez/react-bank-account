@@ -3,6 +3,7 @@ function Loader() {
     <div className="loader-container">
       <div className="loader"></div>
       <p>Loading...</p>
+      <p>click open account</p>
     </div>
   );
 }

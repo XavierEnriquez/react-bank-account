@@ -14,7 +14,9 @@ It should automatically open [http://localhost:3000](http://localhost:3000) in y
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-Open another terminal node to run the json-server local api to populate the questions database:
+### `NOTICE: Server not implemented in this V1`
+
+Open another terminal node to run the json-server local api to populate the fake db.json database:
 
 ### `npm run server`
 

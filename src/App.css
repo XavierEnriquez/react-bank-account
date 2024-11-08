@@ -9,13 +9,14 @@
 }
 
 .App {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* text-align: center; */
-  color: white;
+  background-color: #f7f1ec;
+  color: rgb(76, 75, 75);
+  line-height: 1.1;
+  padding: 2rem;
 }
 
 .App-logo {
@@ -42,13 +43,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-h1 {
-  font-size: 3rem;
-}
-
-h2 {
-  font-size: 2rem;
+  margin: 2rem 0;
 }
 
 .App-link {
@@ -58,9 +53,11 @@ h2 {
 .App main {
   display: flex;
   flex-direction: column;
+  gap: 1.5rem;
 }
 
 .panels-wrapper {
+  color: var(--color-light);
   display: flex;
   gap: 1rem;
 }
@@ -68,32 +65,48 @@ h2 {
 .menu-panel {
   display: flex;
   flex-direction: column;
+  height: fit-content;
   gap: 0.125rem;
-}
-
-.menu-btn {
-  width: 100%;
-  display: block;
-  font-family: inherit;
-  color: var(--color-light);
-  font-size: 1rem;
-  text-align: left;
-  border: 2px solid var(--color-dark);
-  background-color: var(--color-dark);
-  padding: 0.65rem 1.125rem;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.menu-btn:not([disabled]):hover {
-  background-color: var(--color-darkest);
-  border: 2px solid var(--color-darkest);
+  border-radius: 0.5rem;
+  overflow: hidden;
 }
 
 .data-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  line-height: 1.1;
   background-color: var(--color-darkest);
   min-width: 18rem;
-  padding: 0rem 2rem;
+  padding: 2.5rem 3rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.dashboard_data_wrapper {
+  min-width: 15rem;
+}
+
+#open-acct_form {
+  display: flex;
+  flex-direction: column;
+  align-content: start;
+  gap: 0.75rem;
+}
+#close-acct_form,
+#loans_form,
+#payments_form,
+#deposits_form,
+#withdrawal_form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .loader-container {
@@ -139,4 +152,71 @@ h2 {
   text-align: center;
   font-size: 1.25rem;
   margin-top: 25%;
+}
+
+.currency_span {
+  background-color: var(--color-dark);
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.btn_menu {
+  width: 100%;
+  display: block;
+  font-family: inherit;
+  text-align: left;
+  border: 2px solid var(--color-dark);
+  background-color: var(--color-dark);
+  padding: 0.65rem 1.125rem;
+}
+
+.btn-group {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+
+.btn_menu:not([disabled]):hover {
+  background-color: var(--color-darkest);
+  border: 2px solid var(--color-darkest);
+}
+.btn_menu:disabled {
+  opacity: 45%;
+  cursor: default;
+}
+
+button {
+  font-size: 1rem;
+  color: var(--color-light);
+  background-color: var(--color-theme);
+  border: 2px solid var(--color-theme);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  opacity: 90%;
+}
+
+button:disabled {
+  opacity: 60%;
+  cursor: default;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+  margin: 0.35rem 0;
+}
+
+p {
+  margin: 0.125rem 0 0.35rem 0;
+}
+
+input {
+  padding: 0.25rem;
+  margin-top: 0.5rem;
 }
