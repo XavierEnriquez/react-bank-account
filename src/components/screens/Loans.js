@@ -1,13 +1,13 @@
 import { useState } from "react";
 
-function Loans({ loans, dispatchData, currFormat }) {
+function Loans({ dispatchData, currFormat }) {
   const [loanAmount, setLoanAmount] = useState(500);
   const [disabled, setDisabled] = useState(false);
   return (
     <form id="loans_form">
       <h3>Loans</h3>
       <div>
-        <p>Request the minimum loan amount: $500.00 </p>
+        <p>Request the minimum loan amount: 500.00 </p>
         <p>or enter an amount below:</p>
         <input
           type="text"
@@ -22,9 +22,9 @@ function Loans({ loans, dispatchData, currFormat }) {
       </div>
 
       {loanAmount < 500 ? (
-        <p>Minimum loan request $500 </p>
+        <p>Minimum loan request: 500.00 </p>
       ) : (
-        <p>Loan amount requested: ${currFormat(loanAmount)}</p>
+        <p>Loan amount requested: {currFormat(loanAmount)}</p>
       )}
       <div>
         <button

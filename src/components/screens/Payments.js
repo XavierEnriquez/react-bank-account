@@ -1,9 +1,7 @@
 import { useState } from "react";
 
 function Payments({ balance, loan, dispatchScreen, dispatchData, currFormat }) {
-  {
-    /**minimun payment is 3% of loan or minimun 1, or if loan less than 1 then loan */
-  }
+  /**minimun payment is 3% of loan or 1, or if loan less than 1 then loan */
   const minPayment =
     Math.ceil(loan * 3) / 100 > 1
       ? Math.ceil(loan * 3) / 100
@@ -28,7 +26,7 @@ function Payments({ balance, loan, dispatchScreen, dispatchData, currFormat }) {
           {balance === 0 && (
             <div>
               <p>
-                Your account balance is <span>{currFormat(balance)}</span>
+                Your account balance is: <span>{currFormat(balance)}</span>
               </p>
               <div className="btn-group">
                 <button
@@ -97,7 +95,7 @@ function Payments({ balance, loan, dispatchScreen, dispatchData, currFormat }) {
               {(minPayment <= balance) &
               (paymentAmount <= loan) &
               (paymentAmount <= minPayment) ? (
-                <p>Minimum payment amount is {currFormat(minPayment)}</p>
+                <p>Minimum payment amount is: {currFormat(minPayment)}</p>
               ) : (
                 ""
               )}

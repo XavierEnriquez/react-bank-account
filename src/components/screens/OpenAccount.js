@@ -8,7 +8,7 @@ function OpenAccount({ dispatchData, dispatchScreen, currFormat }) {
     <form id="open-acct_form">
       <h3>Open Account</h3>
       <div>
-        <p>Minimum initial deposit required: $500 </p>
+        <p>Minimum initial deposit required: 500.00 </p>
         <p>or enter another amount below:</p>
         <input
           type="text"

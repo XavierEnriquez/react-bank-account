@@ -48,7 +48,7 @@ function Withdraw({ balance, dispatchData, dispatchScreen, currFormat }) {
               />
             </div>
             {withdrawAmount < 1 ? (
-              <p>Minimum amount $1.00 </p>
+              <p>Minimum withdraw: 1.00 </p>
             ) : withdrawAmount > balance ? (
               <p>Amount requested exceeds account balance!</p>
             ) : (

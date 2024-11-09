@@ -19,7 +19,7 @@ function Deposit({ dispatchData, currFormat }) {
         />
       </div>
       {depAmount < 1 ? (
-        <p>Minimum deposit $1 </p>
+        <p>Minimum deposit: 1.00 </p>
       ) : (
         <p>Deposit amount: {currFormat(depAmount)}</p>
       )}
