@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function Loans({ dispatchData, currFormat }) {
-  const [loanAmount, setLoanAmount] = useState(500);
+  const [loanAmount, setLoanAmount] = useState("");
   const [disabled, setDisabled] = useState(false);
   return (
     <form id="loans_form">
@@ -10,6 +10,7 @@ function Loans({ dispatchData, currFormat }) {
         <p>Request the minimum loan amount: 500.00 </p>
         <p>or enter an amount below:</p>
         <input
+          value={loanAmount}
           type="text"
           placeholder="Enter loan amount"
           onChange={(e) => {
@@ -31,8 +32,11 @@ function Loans({ dispatchData, currFormat }) {
           disabled={disabled}
           onClick={(e) => {
             e.preventDefault();
-            dispatchData({ type: "LOANREQUEST", payload: loanAmount });
-            setLoanAmount(500);
+            dispatchData({
+              type: "LOANREQUEST",
+              payload: loanAmount >= 500 ? loanAmount : 500,
+            });
+            setLoanAmount("");
           }}
         >
           Request loan
