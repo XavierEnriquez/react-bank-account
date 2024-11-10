@@ -50,17 +50,6 @@ function dataReducer(state, action) {
   switch (action.type) {
     case "RESET":
       return { ...initialState };
-    case "DATASUCCESS":
-      return {
-        ...state,
-        balance: action.payload[0].balance,
-        loans: action.payload[0].loans,
-      };
-    case "LOANAMOUNTS":
-      return {
-        ...state,
-        fetchData: "loans",
-      };
     case "OPENACCOUNT":
       return {
         ...state,
@@ -108,24 +97,6 @@ function App() {
     screenReducer,
     initialState
   );
-
-  // useEffect(() => {
-  //   async function getAccounts(db) {
-  //     try {
-  //       if (!db) return;
-  //       dispatchScreen({ type: "ACTIVESCREEN", payload: "loading" });
-  //       const response = await fetch(`http://localhost:8000/${db}`);
-  //       if (!response.ok) throw new Error();
-  //       const data = await response.json();
-  //       console.log(data);
-  //       dispatchData({ type: "DATASUCCESS", payload: data });
-  //       dispatchScreen({ type: "ACTIVESCREEN", payload: "dashboard" });
-  //     } catch (error) {
-  //       dispatchScreen({ type: "DATAFAIL" });
-  //     }
-  //   }
-  //   getAccounts(fetchData);
-  // }, [fetchData]);
 
   return (
     <div className="App">
